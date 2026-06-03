@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(247 254 231);
+}
+
+/* Адаптивные отступы для контейнера */
+@media (max-width: 767px) {
+  /* Увеличенные кнопки на мобильных для удобного тапа */
+  button, 
+  [role="button"],
+  .cursor-pointer:not(img) {
+    min-height: 44px;
+  }
+  
+  /* Увеличенные иконки для удобного тапа */
+  img[alt="Cart"],
+  img[alt="Favorites"],
+  img[alt="Profile"],
+  img[alt="Like"],
+  img[alt="Add to cart"] {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+  }
+  
+  /* Улучшенная читаемость на мобильных */
+  p, span, b, h2 {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Плавные переходы для адаптивности */
+* {
+  transition-property: padding, margin, width, height;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+/* Стили для скролла в Drawer на мобильных */
+@media (max-width: 767px) {
+  .overflow-y-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
